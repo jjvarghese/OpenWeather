@@ -21,7 +21,7 @@ class Secrets {
         }
         
         if let dict = keys {
-            return dict[key] as? String ?? ""
+            return dict[key.rawValue] as? String ?? ""
         } else {
             return ""
         }
