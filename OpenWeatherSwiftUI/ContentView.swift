@@ -8,12 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var weatherViewModel: WeatherViewModel
+    
+    init() {
+        self.weatherViewModel = WeatherViewModel()
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("What's the weather like today?")
+            TextField("Enter city name", text: $weatherViewModel.cityName) {
+                weatherViewModel.search()
+            }
+            
+            weatherViewModel.temperature.count > 0 ?
+            Text("The temperature is \(weatherViewModel.temperature) degrees celcius in \(weatherViewModel.cityName) today")
+            : nil
+            
         }
         .padding()
     }

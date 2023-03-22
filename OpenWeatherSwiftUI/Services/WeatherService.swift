@@ -11,7 +11,9 @@ class WeatherService {
     
     func getWeather(city: String,
                     completion: @escaping (Weather?) -> ()) {
-        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?appid=\(Secrets.getSecret(key: .apiKey))&q=\(city)") else {
+        let urlString = "http://api.openweathermap.org/data/2.5/weather?appid=\(Secrets.getSecret(key: .apiKey))&q=\(city)&units=metric"
+        
+        guard let url = URL(string: urlString) else {
             completion(nil)
             
             return
