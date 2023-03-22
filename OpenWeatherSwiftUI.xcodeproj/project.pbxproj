@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E13347C629CA0493000DC23C /* OpenWeatherSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13347C529CA0493000DC23C /* OpenWeatherSwiftUIApp.swift */; };
-		E13347C829CA0493000DC23C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13347C729CA0493000DC23C /* ContentView.swift */; };
+		E13347C829CA0493000DC23C /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13347C729CA0493000DC23C /* WeatherView.swift */; };
 		E13347CA29CA0494000DC23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13347C929CA0494000DC23C /* Assets.xcassets */; };
 		E13347CD29CA0494000DC23C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13347CC29CA0494000DC23C /* Preview Assets.xcassets */; };
 		E13347D529CA0522000DC23C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13347D429CA0522000DC23C /* Weather.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		E13347C229CA0493000DC23C /* OpenWeatherSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13347C529CA0493000DC23C /* OpenWeatherSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherSwiftUIApp.swift; sourceTree = "<group>"; };
-		E13347C729CA0493000DC23C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E13347C729CA0493000DC23C /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		E13347C929CA0494000DC23C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E13347CC29CA0494000DC23C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E13347D429CA0522000DC23C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -66,13 +66,13 @@
 		E13347C429CA0493000DC23C /* OpenWeatherSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E13347E829CB0401000DC23C /* Views */,
 				E13347E729CA139E000DC23C /* Info.plist */,
 				E13347E029CA0B48000DC23C /* Utility */,
 				E13347DA29CA0972000DC23C /* ViewModels */,
 				E13347D629CA05AE000DC23C /* Services */,
 				E13347D329CA0517000DC23C /* Models */,
 				E13347C529CA0493000DC23C /* OpenWeatherSwiftUIApp.swift */,
-				E13347C729CA0493000DC23C /* ContentView.swift */,
 				E13347C929CA0494000DC23C /* Assets.xcassets */,
 				E13347CB29CA0494000DC23C /* Preview Content */,
 				E13347DE29CA0B00000DC23C /* keys.plist */,
@@ -120,6 +120,14 @@
 				E13347E129CA0B5A000DC23C /* Secrets.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		E13347E829CB0401000DC23C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E13347C729CA0493000DC23C /* WeatherView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +206,7 @@
 				E13347DC29CA097F000DC23C /* WeatherViewModel.swift in Sources */,
 				E13347E229CA0B5A000DC23C /* Secrets.swift in Sources */,
 				E13347D829CA0634000DC23C /* WeatherService.swift in Sources */,
-				E13347C829CA0493000DC23C /* ContentView.swift in Sources */,
+				E13347C829CA0493000DC23C /* WeatherView.swift in Sources */,
 				E13347D529CA0522000DC23C /* Weather.swift in Sources */,
 				E13347C629CA0493000DC23C /* OpenWeatherSwiftUIApp.swift in Sources */,
 			);
