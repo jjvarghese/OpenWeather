@@ -45,7 +45,9 @@ class WeatherViewModel: ObservableObject {
     private func fetchWeather(by city: String) {
         weatherService.getWeather(city: city) { weather in
             if let weather {
-                self.weather = weather
+                DispatchQueue.main.async { [weak self] in
+                    self?.weather = weather
+                }
             }
         }
     }

@@ -23,7 +23,7 @@ struct ContentView: View {
             Text("What's the weather like today?")
             TextField("Enter city name", text: $weatherViewModel.cityName) {
                 weatherViewModel.search()
-            }
+            }.padding()
             
             weatherViewModel.temperature.count > 0 ?
             Text("The temperature is \(weatherViewModel.temperature) degrees celcius in \(weatherViewModel.cityName) today")
