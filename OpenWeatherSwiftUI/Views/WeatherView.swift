@@ -20,10 +20,13 @@ struct WeatherView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
+                .padding()
             Text("What's the weather like today?")
             TextField("Enter city name", text: $weatherViewModel.cityName) {
                 weatherViewModel.search()
-            }.padding()
+            }
+            .padding()
+            .multilineTextAlignment(.center)
             
             weatherViewModel.temperature.count > 0 ?
             Text("The temperature is \(weatherViewModel.temperature) degrees celcius in \(weatherViewModel.cityName) today")
